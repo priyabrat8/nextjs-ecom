@@ -132,7 +132,9 @@ const Slug = ({ addToCart, product, variants, buyNow, error }) => {
       }
 
       // Check if user bought the product
-      let url = `${process.env.NEXT_PUBLIC_HOST}/api/checkproductorder`;
+      if (myuser) {
+        if (myuser.email) {
+          let url = `${process.env.NEXT_PUBLIC_HOST}/api/checkproductorder`;
       let data = {
         email: myuser.email,
         name: product.slug,
@@ -159,6 +161,10 @@ const Slug = ({ addToCart, product, variants, buyNow, error }) => {
           progress: undefined,
         });
       }
+        }
+        
+      }
+      
     } else {
       setrcard(false);
       setStar(0);
@@ -167,10 +173,14 @@ const Slug = ({ addToCart, product, variants, buyNow, error }) => {
   };
 
   useEffect(() => {
+    let myuser = JSON.parse(localStorage.getItem("myuser"));
     if (!error) {
       setSize(product.size);
       setColor(product.color);
-      allReviews();
+      if (myuser) {
+        allReviews();
+      }
+      
     }
   }, [router.query, error, product, allReviews]);
 
@@ -196,7 +206,7 @@ const Slug = ({ addToCart, product, variants, buyNow, error }) => {
       )}
       {!error && size && color && (
         <>
-          <section className="text-gray-600 body-font overflow-hidden">
+          <section className="text-gray-600 body-font overflow-hidden scroll-smooth">
             <ToastContainer
               position="bottom-center"
               autoClose={5000}
@@ -546,7 +556,15 @@ const Slug = ({ addToCart, product, variants, buyNow, error }) => {
                 </div>
               </div>
             )}
-            {comments.map((e) => {
+
+           {comments.length === 0 &&  <div
+                className=" pt-5 pb-5 mx-8 bg-white mb-10 rounded-sm overflow-auto"
+                >
+                  <h3 className="text-center  font-semibold text-red-600">No Reviews!</h3>
+                </div>  
+               
+           }
+            {comments.length !== 0 &&  comments.map((e) => {
               return (
                 <div
                   key={e.email}
