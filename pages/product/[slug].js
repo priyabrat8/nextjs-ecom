@@ -318,7 +318,7 @@ const Slug = ({ addToCart, product, variants, buyNow, error }) => {
                         </a>
                       </span>
                     </div>
-                    <span className="flex  mb-3  text-black font-semibold cursor-pointer border-gray-200 ">
+                    <span className="flex  mb-3  text-black font-medium border-gray-200 ">
                       {review.numrating} global ratings
                     </span>
                     <p className="leading-relaxed">{product.desc}</p>

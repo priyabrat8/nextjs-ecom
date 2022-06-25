@@ -1,5 +1,6 @@
 import React,{ useEffect,useState } from 'react'
 import mongoose from 'mongoose'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Order from '../models/Order'
@@ -52,11 +53,14 @@ const MyOrder = ({order,id}) => {
                                     <h3 className="text-xl xl:text-2xl font-semibold leading-6 text-gray-800">{products[item].name}</h3>
                                     <div className="flex justify-start items-start flex-col space-y-2">
                                        <p className="text-sm leading-none text-gray-800">
-                                            <span className="text-gray-300">Size: </span> {products[item].size}
+                                            <span className="text-gray-500">Size: </span> {products[item].size}
                                         </p>
                                         <p className="text-sm leading-none text-gray-800">
-                                            <span className="text-gray-300">Color: </span> {products[item].color}
+                                            <span className="text-gray-500">Color: </span> {products[item].color}
                                         </p>
+                                { order.deliveryStatus == 'Delivered' && <p className="text-sm leading-none mt-2 font-semibold py-2 text-gray-800">
+                                        <span className="text-purple-600"><Link href={`/product/${item}#reviews`}>Give your feedback</Link></span>
+                                        </p> }
                                     </div>
                                 </div>
                                 <div className="flex justify-between space-x-8 items-start w-full">
