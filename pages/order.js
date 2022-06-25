@@ -81,7 +81,7 @@ const MyOrder = ({order,id}) => {
                         
                       </div>
                       <div className="flex justify-center md:flex-row flex-col items-stretch w-full space-y-4 md:space-y-0 md:space-x-6 xl:space-x-8">
-                        <div className="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 space-y-6   ">
+                        <div className="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 space-y-6 overflow-auto">
                             <div className="flex justify-between items-center w-full">
                                 <p className="text-base font-semibold leading-4 text-gray-800">Name</p>
                                 <p className="text-base font-semibold leading-4 text-gray-600">{order.name}</p>
@@ -91,8 +91,8 @@ const MyOrder = ({order,id}) => {
                                 <p className="text-base font-semibold leading-4 text-gray-600">{order.email}</p>
                             </div>
                             <div className="flex justify-between items-center w-full">
-                                <p className="text-base font-semibold leading-4 text-gray-800">Address</p>
-                                <p className="text-base font-semibold leading-4 text-gray-600">{order.address},{order.city},<span className='mt-1 block'>{order.state}-{order.pincode}</span></p>
+                                <p className="text-base font-semibold leading-4 text-gray-800 mr-6">Address</p>
+                                <p className="text-base font-semibold leading-4 text-gray-600 ">oihufveg{order.address},{order.city},<span className='mt-1 block'>{order.state}-{order.pincode}</span></p>
                             </div>
                             <div className="flex justify-between items-center w-full">
                                 <p className="text-base font-semibold leading-4 text-gray-800">Phone</p>

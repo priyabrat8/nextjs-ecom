@@ -14,7 +14,7 @@ const OrderSchema = new mongoose.Schema({
     amount: {type:String,required:true},
     phone: {type:String,required:true},
     status: {type:String,default: 'Paid',required:true},
-    deliveryStatus: {type:String,default: 'unshipped',required:true},
+    deliveryStatus: {type:String,default: 'Unshipped',required:true},
 
   }, {timestamps: true});
 

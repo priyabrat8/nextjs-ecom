@@ -133,7 +133,7 @@ useEffect(() => {
         className={`sideCart absolute z-50  top-0  py-10 px-8 w-72 h-[100vh] 
         bg-purple-100 transition-all  ${
           toogle ? "right-0" : "-right-96"
-        }  ${Object.keys(cart).length >= 6 && 'overflow-y-scroll' } `}
+        } overflow-auto`}
       >
         <h2 className="text-xl font-bold text-center">Shopping Cart</h2>
         <span

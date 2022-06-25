@@ -5,7 +5,7 @@ import Order from '../../models/Order'
 const handler = async (req,res) => {
     let e = false
     if (req.method == 'POST') {
-       const user = await Order.find({email:req.body.email})
+       const user = await Order.find({email:req.body.email,deliveryStatus: 'Delivered'})
 
     if (user) {
         for (const orders of user) {

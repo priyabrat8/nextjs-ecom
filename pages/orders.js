@@ -75,21 +75,21 @@ const MyOrders = () => {
                       >
                         #
                       </th>
-                      <th
+                      {/* <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium md:flex hidden text-gray-900 px-6 py-4 text-left"
                       >
                         Order Date
-                      </th>
+                      </th> */}
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium md:flex hidden text-gray-900 px-6 py-4 text-left"
                       >
                         Amount
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium  text-gray-900 px-6 py-4 text-left"
                       >
                         Details
                       </th>
@@ -104,10 +104,10 @@ const MyOrders = () => {
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           {item.orderId}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                        {/* <td className="text-sm md:flex hidden  text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                           {setDate(item.updatedAt)}
-                        </td>
-                        <td className="text-sm text-gray-900 font-light px-8 py-4 whitespace-nowrap">
+                        </td> */}
+                        <td className="text-sm md:flex hidden text-gray-900 font-light px-8 py-4 whitespace-nowrap">
                           {item.amount}
                         </td>
                         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
