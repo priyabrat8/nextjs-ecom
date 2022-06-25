@@ -209,7 +209,7 @@ pauseOnHover
     <div className='container mx-auto my-9' >
       <h1 className="text-3xl mb-6 text-center font-bold ">Update your Account</h1>
       <div className="flex my-2">
-      <div className=" mx-auto w-1/2 py-10 bg-white rounded-lg p-8  shadow-md">
+      <div className=" mx-auto md:w-1/2 py-10 bg-white rounded-lg p-8  shadow-md">
       <h2 className="text-xl font-semibold">1. Account Details</h2>
           <div className="mt-2">
             <label className="leading-7 text-sm text-gray-600" htmlFor="name">
@@ -340,7 +340,7 @@ pauseOnHover
       </div>
       
       <div className="flex  my-2">
-      <div className=" mx-auto py-10 bg-white rounded-lg p-8 mt-6 shadow-md w-1/2">
+      <div className=" mx-auto py-10 bg-white rounded-lg p-8 mt-6 shadow-md md:w-1/2">
       <h2 className="text-xl font-semibold">2.Reset Password</h2>
       <div className="mt-2">
             <label className="leading-7 text-sm text-gray-600" htmlFor="cpassword">

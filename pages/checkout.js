@@ -199,7 +199,7 @@ pauseOnHover
       
       <h1 className="text-3xl text-center font-bold ">Checkout</h1>
       <div className="flex my-2">
-      <div className=" mx-auto w-1/2 py-10 bg-white rounded-lg p-8  shadow-md">
+      <div className=" mx-auto md:w-1/2 py-10 bg-white rounded-lg p-8  shadow-md">
       <h2 className="text-xl font-semibold">1. Delivery Details</h2>
 
           <div className="mt-2">

@@ -183,7 +183,7 @@ pauseOnHover
 
                 <div className="text-sm">
                   <Link href={`/signup`}  >
-                    <a href="#" className="font-bold text-black-600 text-md">
+                    <a className="font-bold text-black-600 text-md">
                       Signup
                     </a>
                   </Link>
